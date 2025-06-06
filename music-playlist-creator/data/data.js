@@ -3,7 +3,7 @@ const playlists=[{
     playlist_name: "Indie", 
     playlist_author: "Ava",
      playlist_art:"assets/img/playlist.png",
-    likes:2,
+    likes:0,
     songs:[
        {
             title:"Electric Feel",
@@ -216,7 +216,7 @@ const playlists=[{
 
 
 
-    
+
 }
 ];
 
