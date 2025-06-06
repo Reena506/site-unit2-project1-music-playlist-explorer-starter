@@ -2,10 +2,127 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #CBC3E3;
 }
 
 header{
+  margin: 10px;
    font-family: 'Arial', sans-serif;
    font-size: 40px; 
+   background-color: lightblue;
+  
+}
+
+
+.playlist-cards{
+    display:grid;
+    gap:20px;
+   
+    grid-template-columns: repeat(4, 1fr);
+
+   
+
+}
+
+.playlist-card{
+    
+    border: 10px solid lightblue;
+    border-radius: 20px;
+    align-self: center;
+    justify-self: center;
+     justify-content:space-around; 
+
+    
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
+
+}
+
+
+img{
+    display: block;
+    width:200px;
+    height: 200px;
+    
+
+
+
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-overlay.show {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+footer{
+  
+    padding: 50px;
+    background-color:lightblue;
+}
+
+.songsec{
+   border: 5px solid lightblue;
+  justify-content:space-around; 
+  padding: 20px;
+  margin: 20 px;
+
+}
+ li{
+  font-size: 20px; 
+  display: flex;
+   /* horizontal */
+  align-items: center; 
+  height: 40px;
+
+ }
+
+
+ .wrap{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh
+
+ }
+
+ .modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
 }

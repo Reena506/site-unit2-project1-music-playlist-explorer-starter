@@ -10,42 +10,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <div class="container">
             <h1>Music Playlist Explorer</h1>
         </div>
         <nav>
             <li><a href="index.html">All</a></li>
+
+            
             <li><a href="featured.html">Featured</a></li>
         </nav>
     </header>
-    <main class="playlist-cards"> 
-       
+   <div class="row">
+        <div class="column" id="featured"> 
+            <img id="playlist_art" src="assets/img/playlist.png" alt="playlist image">
+            <h2 id="playlist-name"> playlist title</h2>
+        </div>
+        <div class="column">
+            <ul id="playlist-songs"> songs</ul>
 
-    </main>
-<div class="modal-overlay" id="modal">
-    <div class="modal-content">
-    <span class="modal-close">&times;</span>
-   
-    <img class="modal-img" src="" alt="">
-    <h2 class="modal-title"></h2>
-    <p class="modal-creator"></p>
-    <button id="shuffle-btn">Shuffle Songs</button>
-    <div class="modal-songs"></div>
-
-           
+        </div>
     </div>
-</div>
-   <div id="All"></div>
 
 
     <footer>
-    </footer>
-    
-        
+        <!-- Your footer content here -->
          
+    </footer>
     <script src="data/data.js"></script>
     <script src="script.js"></script>
+    <script>
+        window.onload = () => showRandomPlaylist(playlists);
+  </script>
+    </script>
+
+   
 </body>
 </html>
+
+
