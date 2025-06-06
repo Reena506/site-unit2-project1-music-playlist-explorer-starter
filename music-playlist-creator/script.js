@@ -14,12 +14,9 @@ const createCards = (playlists) => {
         <span class="like-count">${p.likes}</span>
         <button class="like-btn" data-id="${p.playListID}">❤️</button>
       </div>
-    `;
 
-
-
-
-
+      <button class="delete-btn" data-id="${p.playListID}">🗑️ Delete</button>
+    `
 
     card.addEventListener('click', (e) => {
       if (!e.target.classList.contains('like-btn')) {
@@ -46,7 +43,29 @@ const createCards = (playlists) => {
       btn.previousElementSibling.textContent = playlist.likes;
     });
   });
-}; 
+
+
+document.querySelectorAll('.delete-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const id = +e.target.dataset.id;
+      const index = playlists.findIndex(pl => pl.playListID === id);
+      if (index !== -1) {
+        playlists.splice(index, 1); 
+        createCards(playlists);
+      }})})}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const openModal = (playlist) => {
