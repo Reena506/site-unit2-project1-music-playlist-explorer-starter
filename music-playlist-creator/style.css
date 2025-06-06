@@ -33,8 +33,12 @@ header{
      justify-content:space-around; 
 
     
-    
 }
+.playlist-card:hover{
+  background-color: white;
+}
+
+
 
 .container {
     display: flex;
